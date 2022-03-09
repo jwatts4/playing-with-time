@@ -1,11 +1,9 @@
-from timer import Timer
-
+from timer import Timer, CLITimerSetter
 
 
 def main():
     t = Timer()
-    num_seconds = int(input("Enter starting time (seconds): "))
-    t.set_time(num_seconds)
+    CLITimerSetter.set_time(t)
     t.countdown()
 
 
