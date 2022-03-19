@@ -3,3 +3,5 @@
 .env
 env/
 test.py
+__pycache__/
+.vscode/
