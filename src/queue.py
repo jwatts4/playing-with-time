@@ -2,7 +2,7 @@ from copy import deepcopy
 
 
 class Queue:
-    """ Queue implemented with a python list """
+    """Queue implemented with a python list"""
 
     def __init__(self):
         self._queue = []

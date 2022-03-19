@@ -1,12 +1,35 @@
 from enum import ENUM
+from abc import ABC, abstractmethod
 
 
-class IntervalType(ENUM):
-    WORK = 1
-    REST = 2
+class Interval(ABC):
+    """
+    Abstract base class for different kinds of time intervals.
+    """
 
-
-class Interval:
-    def __init__(self, seconds, type):
+    def __init__(self, seconds):
         self.seconds = seconds
-        self.type = type
+
+    @abstractmethod
+    def display(self):
+        pass
+
+    @abstractmethod
+    def countdown(self):
+        pass
+
+
+class MicroWorkInterval(Interval):
+    pass
+
+
+class MicroRestInterval(Interval):
+    pass
+
+
+class PomoWorkInterval(Interval):
+    pass
+
+
+class PomoRestInterval(Interval):
+    pass
